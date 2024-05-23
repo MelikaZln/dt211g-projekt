@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Search, Weather, and Timezone Converter</title>
+    
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background-color: black;     margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;">
+    
+    <div class="proContainer">
+        
+        <div class="proTitelContainer"><h1 class="proTitel">Information om önskad stad!</h1></div>
+        
+        <img alt="jorden" src="images/jorden.avif" class="proImage">
+        
+       <div class="containetIputPro"><input class="proInput" type="text" id="cityInput" placeholder="Vilken stad söker du?"></div> 
+       
+       <div class="buttonContainerPro">        
+            <button class="proButton" onclick="searchCity()">Karta</button>
+            <button class="proButton" onclick="getTimezone()">Timezone</button>
+            <button class="proButton" onclick="getWeather()">Väder</button>
+        </div>
+        
+        <div class="resultContainerPro">
+            
+            <div id="map" class="proMap"></div>
+            
+            <div id="weather-info" class="weatherPro"></div>
+            
+            <div id="timezone-info" class="timezonePro"></div>
+        </div>
+    </div>
+
+    
+    <script src="js/main.js" defer></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk0H6dAN4dGQG0-wGRIWJ0OAjWzwoGASw&libraries=places"></script>
+</body>
+</html>
